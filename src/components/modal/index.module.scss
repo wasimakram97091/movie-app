@@ -30,10 +30,22 @@
       }
 
       &__youtube {
+        > iframe {
+          width: 500px;
+          height: 310px;
+          @media screen and (max-width: 768px) {
+            width: 275px;
+            height: 150px;
+          }
+        }
         &__error {
           width: 400px;
           height: 200px;
           text-align: center;
+          @media screen and (max-width: 768px) {
+            width: 275px;
+            height: 150px;
+          }
 
           > p {
             color: red;

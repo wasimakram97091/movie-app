@@ -34,7 +34,7 @@ function Modal({ closeModal }) {
             </button>
             <div className={Styles.main__container__content__youtube}>
               {videoId ? (
-                <iframe width="500" height="310" src={`https://www.youtube.com/embed/${data.results[0].key}`} title="YouTube video player" frameBorder="0" allowFullScreen></iframe>
+                <iframe src={`https://www.youtube.com/embed/${data.results[0].key}`} title="YouTube video player" frameBorder="0" allowFullScreen></iframe>
               ) : (
                 <div className={Styles.main__container__content__youtube__error}>
                   <p>No Video found</p>

@@ -36,7 +36,7 @@ function Navbar() {
   };
 
   const homeHandler = () => {
-    navigate("/");
+    navigate("/home");
   };
   const tvShowsHandler = () => {
     navigate("/tvShows");
