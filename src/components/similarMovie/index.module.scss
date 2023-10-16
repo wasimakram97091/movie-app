@@ -1,0 +1,25 @@
+.main {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #1a1a1d;
+
+  &__container {
+    max-width: 1296px;
+    margin: 0 auto;
+    padding: 0 35px;
+    > h2 {
+      color: #fff;
+      margin: 0;
+      padding: 0 0 1rem 0;
+    }
+    &__content {
+      > p {
+        margin: 0;
+        padding: 2rem;
+        text-align: center;
+        color: red;
+      }
+    }
+  }
+}

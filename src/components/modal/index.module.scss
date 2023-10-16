@@ -1,0 +1,50 @@
+.main {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  position: absolute;
+  &__overlay {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(12, 12, 12, 0.5);
+    z-index: 1000;
+  }
+
+  &__container {
+    &__content {
+      position: relative;
+      z-index: 1111;
+      max-width: 500px;
+      max-height: 400px;
+      text-align: right;
+      border: 5px solid #fff;
+      background-color: #fff;
+      margin: 0 auto;
+
+      > button {
+        font-size: 1.5rem;
+        cursor: pointer;
+      }
+
+      &__youtube {
+        &__error {
+          width: 400px;
+          height: 200px;
+          text-align: center;
+
+          > p {
+            color: red;
+            font-weight: 600;
+          }
+          > i {
+            color: red;
+            font-size: 2rem;
+          }
+        }
+      }
+    }
+  }
+}

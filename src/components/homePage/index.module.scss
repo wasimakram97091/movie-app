@@ -1,0 +1,35 @@
+.main {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    background-color: rgba($color: #000000, $alpha: 0.2);
+    &__content {
+      padding: 1rem;
+      margin-bottom: 3rem;
+      z-index: 111;
+
+      @media screen and (max-width: 768px) {
+        padding: 0.5rem;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}

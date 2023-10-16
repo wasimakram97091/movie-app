@@ -1,0 +1,96 @@
+.main {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  &__container {
+    &__content {
+      > a {
+        text-decoration: none;
+      }
+      &__card {
+        width: 225px;
+        height: 338px;
+        border: 5px solid #c3073f;
+        position: relative;
+        border-radius: 5px;
+        margin-bottom: 100px;
+        margin-top: 20px;
+        cursor: pointer;
+        transition: 0.3s ease-in-out;
+        margin-left: auto;
+        margin-right: auto;
+
+        &:hover {
+          transform: scale(1.04);
+        }
+        &__img {
+          > img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+
+        &__types {
+          display: flex;
+          align-items: center;
+          position: absolute;
+          bottom: 1.7rem;
+          right: 0.5rem;
+          flex-wrap: wrap;
+          gap: 0.3rem;
+          justify-content: left;
+          > p {
+            background-color: #c3073f;
+            color: #ffffff;
+            margin: 0 0.3rem;
+            padding: 0.1rem 0.5rem;
+            border-radius: 30px;
+            font-size: 0.7rem;
+            font-weight: 600;
+          }
+        }
+
+        &__rating {
+          text-align: center;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 2.5rem;
+          width: 2.5rem;
+          background-color: #ffffff;
+          border-radius: 50px;
+          position: absolute;
+          left: 0rem;
+          bottom: -1.5rem;
+          color: #000;
+
+          > p {
+            color: black;
+            font-size: 1rem;
+            font-weight: 600;
+            font-size: 0.7rem;
+
+            > span {
+              color: #c3073f;
+            }
+          }
+        }
+
+        &__name {
+          > h2 {
+            color: #ffffff;
+            font-size: 1.1rem;
+            margin: 0;
+            padding: 1.7rem 0 0.2rem 0;
+          }
+          > p {
+            margin: 0;
+            font-size: 0.8rem;
+            color: #ffffff;
+          }
+        }
+      }
+    }
+  }
+}

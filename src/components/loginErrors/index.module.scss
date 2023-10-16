@@ -1,0 +1,53 @@
+.main {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  &__container {
+    background-color: #1a1a1d;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__content {
+      min-height: 100px;
+      min-width: 300px;
+      background-color: #ffffff;
+      text-align: center;
+      border-radius: 10px;
+      padding: 20px;
+
+      @media screen and (max-width: 768px) {
+        min-width: 75%;
+        padding: 10px;
+      }
+      > p {
+        color: red;
+        font-size: 20px;
+        font-weight: 600;
+
+        @media screen and (max-width: 768px) {
+          font-size: 14px;
+        }
+      }
+
+      > button {
+        padding: 5px 8px;
+        cursor: pointer;
+        background-color: #c3073f;
+        color: #ffffff;
+        transition: 0.3s ease-in-out;
+        border-radius: 5px;
+        outline: none;
+        border: 1px solid #c3073f;
+
+        &:hover {
+          background-color: transparent;
+          color: #1a1a1d;
+          border: 1px solid #1a1a1d;
+        }
+      }
+    }
+  }
+}
