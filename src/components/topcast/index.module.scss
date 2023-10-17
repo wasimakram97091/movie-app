@@ -27,33 +27,37 @@
         display: flex;
         justify-content: space-between;
         column-gap: 19px;
+        // flex-wrap: wrap;
 
         @media screen and (max-width: 768px) {
           flex-wrap: wrap;
-          column-gap: 0;
+          column-gap: 10px;
         }
         @media screen and (max-width: 991px) {
           flex-wrap: wrap;
           column-gap: 0;
+          justify-content: space-evenly;
         }
         &__wrap {
-          max-width: 200px;
-
-          @media screen and (max-width: 768px) {
-            max-width: 130px;
-            margin-bottom: 20px;
-          }
-          @media screen and (max-width: 991px) {
-            max-width: 220px;
-            margin-bottom: 20px;
-          }
+          margin-bottom: 25px;
           &__img {
             border: 5px solid #c3073f;
             border-radius: 5px;
+            max-width: 200px;
+
+            @media screen and (max-width: 768px) {
+              max-width: 100px;
+            }
+            @media screen and (min-width: 768px) and (max-width: 991px) {
+              max-width: 170px;
+            }
 
             > img {
               max-width: 100%;
               display: block;
+              @media screen and (max-width: 768px) {
+                min-width: 100%;
+              }
             }
           }
           > h4 {

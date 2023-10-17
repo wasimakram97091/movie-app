@@ -13,6 +13,9 @@
       text-align: center;
       max-width: 900px;
       margin: 0 auto;
+      @media screen and (max-width: 768px) {
+        padding: 0 20px;
+      }
 
       @media screen and (max-width: 991px) {
         padding: 0 50px;
@@ -33,10 +36,10 @@
           cursor: pointer;
           @media screen and (max-width: 768px) {
             padding: 0.4rem;
-            font-size: 0.8rem;
+            font-size: 0.6rem;
             margin: 1rem 0;
           }
-          @media screen and (max-width: 991px) {
+          @media screen and (min-width: 769px) and (max-width: 991px) {
             font-size: 0.9rem;
           }
 
@@ -57,10 +60,10 @@
           padding: 0;
 
           @media screen and (max-width: 768px) {
-            font-size: 0.8rem;
-            padding: 0 15px;
+            font-size: 0.6rem;
           }
-          @media screen and (max-width: 991px) {
+
+          @media screen and (min-width: 769px) and (max-width: 991px) {
             font-size: 0.9rem;
           }
         }

@@ -40,7 +40,7 @@
         padding: 20px 0;
       }
       @media screen and (max-width: 991px) {
-        padding: 20px;
+        padding: 20px 0;
         align-items: center;
       }
 
@@ -88,6 +88,7 @@
 
         @media screen and (max-width: 991px) {
           padding-left: 0;
+          padding: 0 15px;
         }
 
         > h2 {
@@ -95,11 +96,11 @@
           margin: 0 0 0.8rem 0;
 
           @media screen and (max-width: 768px) {
-            font-size: 2rem;
+            font-size: 1.7rem;
             margin: 0.5rem 0;
           }
           @media screen and (max-width: 991px) {
-            font-size: 2rem;
+            font-size: 1.7rem;
           }
         }
         > p {
