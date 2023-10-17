@@ -21,10 +21,20 @@ function Footer() {
             </p>
           </div>
           <div className={Styles.main__container__content__icon}>
-            <i className="fa-brands fa-facebook"></i>
-            <i className="fa-brands fa-instagram"></i>
-            <i className="fa-brands fa-x-twitter"></i>
-            <i className="fa-brands fa-linkedin-in"></i>
+            <a href="https://www.facebook.com/profile.php?id=100007726477374" target="_blank">
+              <i className="fa-brands fa-facebook"></i>
+            </a>
+            <a href="https://instagram.com/__hey.wasim?utm_source=qr&igshid=MzNlNGNkZWQ4Mg==" target="_blank">
+              <i className="fa-brands fa-instagram"></i>
+            </a>
+
+            <a href=" https://x.com/__________waim?t=y48o-vT5uF7IynY-tzs3-g&s=08" target="_blank">
+              <i className="fa-brands fa-x-twitter"></i>
+            </a>
+
+            <a href="https://www.linkedin.com/in/wasim-akram-542960289" target="_blank">
+              <i className="fa-brands fa-linkedin-in"></i>
+            </a>
           </div>
         </div>
       </div>

@@ -11,6 +11,9 @@
     @media screen and (max-width: 768px) {
       padding: 0;
     }
+    @media screen and (max-width: 991px) {
+      padding: 20px 0;
+    }
 
     &__content {
       padding: 0 15px;
@@ -29,11 +32,19 @@
           flex-wrap: wrap;
           column-gap: 0;
         }
+        @media screen and (max-width: 991px) {
+          flex-wrap: wrap;
+          column-gap: 0;
+        }
         &__wrap {
           max-width: 200px;
 
           @media screen and (max-width: 768px) {
             max-width: 130px;
+            margin-bottom: 20px;
+          }
+          @media screen and (max-width: 991px) {
+            max-width: 220px;
             margin-bottom: 20px;
           }
           &__img {

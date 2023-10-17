@@ -12,6 +12,9 @@
     @media screen and (max-width: 768px) {
       padding: 20px 10px;
     }
+    @media screen and (max-width: 991px) {
+      padding: 20px;
+    }
     > button {
       background-color: transparent;
       border-radius: 5px;
@@ -57,7 +60,6 @@
         &__wrap {
           max-width: 200px;
           &__img {
-            // height: 290px;
             border: 5px solid #c3073f;
             border-radius: 5px;
 

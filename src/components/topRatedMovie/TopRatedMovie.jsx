@@ -47,6 +47,13 @@ function TopRatedMovie() {
           slidesToScroll: 1,
         },
       },
+      {
+        breakpoint: 991,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
     ],
   };
 
