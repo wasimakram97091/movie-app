@@ -45,7 +45,7 @@ function DetailsHome() {
               <p>{data.tagline}</p>
               <div className={Styles.main__container__content__details__genre}>
                 <p>
-                  {data?.genres?.map((item) => (
+                  {data?.genres?.slice(0, 3).map((item) => (
                     <span> {item.name} </span>
                   ))}
                 </p>
