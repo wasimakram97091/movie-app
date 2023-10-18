@@ -2,8 +2,6 @@ import React from "react";
 import Styles from "./index.module.scss";
 import { Link } from "react-router-dom";
 
-// ...
-
 function MovieCard({ topRated_tv_original_name, topRated_tv_backgroundImageUrl, topRated_tv_first_air_date, topRated_tv_rating, chipId, genreIdVSName = {}, id }) {
   const topRated_tv_name = topRated_tv_original_name ? topRated_tv_original_name : "";
   const baseImgUrl = topRated_tv_backgroundImageUrl ? `https://image.tmdb.org/t/p/original/${topRated_tv_backgroundImageUrl}` : "";

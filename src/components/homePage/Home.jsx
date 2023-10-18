@@ -34,7 +34,6 @@ function Home() {
     backgroundImage: backgroundImageUrl ? `url(${backgroundImageUrl})` : "",
     backgroundSize: "cover",
     width: "100%",
-    height: "100vh",
   };
 
   return (

@@ -40,19 +40,30 @@ function TopRated() {
     slidesToShow: 5,
     slidesToScroll: 1,
     initialSlide: 0,
+
     responsive: [
       {
-        breakpoint: 768,
+        breakpoint: 576,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 1.3,
           slidesToScroll: 1,
+          arrows: false,
         },
       },
       {
-        breakpoint: 991,
+        breakpoint: 768,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 2.3,
           slidesToScroll: 1,
+          arrows: false,
+        },
+      },
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3.2,
+          slidesToScroll: 1,
+          arrows: false,
         },
       },
     ],
