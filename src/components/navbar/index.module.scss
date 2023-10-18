@@ -23,6 +23,9 @@
       @media screen and (max-width: 991px) {
         padding: 0 25px;
       }
+      @media screen and (max-width: 1245px) {
+        padding: 0 35px;
+      }
 
       &__logo {
         > h2 {
@@ -63,6 +66,18 @@
       }
 
       &__icon {
+        > i {
+          font-size: 1.3rem;
+          cursor: pointer;
+          @media screen and (max-width: 768px) {
+            font-size: 1rem;
+          }
+          &:hover {
+            color: #950740;
+          }
+        }
+      }
+      &__logout {
         > i {
           font-size: 1.3rem;
           cursor: pointer;

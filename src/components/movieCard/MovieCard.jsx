@@ -36,10 +36,10 @@ function MovieCard({ topRated_tv_original_name, topRated_tv_backgroundImageUrl, 
                     <CircularProgressbar value={topRated_tv_rating * 10} text={`${Math.floor(percentage)}`} />
                   </p>
                 </div>
-                <div className={Styles.main__container__content__card__name}>
-                  <h2>{topRated_tv_name} </h2>
-                  <p> Release date : {topRated_tv_first_air_date} </p>
-                </div>
+              </div>
+              <div className={Styles.main__container__content__card__name}>
+                <h2>{topRated_tv_name} </h2>
+                <p> Release date : {topRated_tv_first_air_date} </p>
               </div>
             </Link>
           </div>

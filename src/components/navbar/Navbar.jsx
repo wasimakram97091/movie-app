@@ -49,6 +49,10 @@ function Navbar() {
     }
   };
 
+  const handleToLogout = () => {
+    navigate("/");
+  };
+
   return (
     <>
       <div className={`${Styles.main} ${isSticky ? Styles.sticky : ""}`}>
@@ -64,6 +68,9 @@ function Navbar() {
               <p onClick={tvShowsHandler}>TV Shows</p>
               <div className={Styles.main__container__navbar__icon} onClick={toggleSearchBar}>
                 <i className="fa-solid fa-magnifying-glass"></i>
+              </div>
+              <div className={Styles.main__container__navbar__logout} onClick={handleToLogout}>
+                <i className="fa-solid fa-right-from-bracket"></i>
               </div>
             </div>
           </div>

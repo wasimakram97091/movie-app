@@ -14,11 +14,11 @@
   }
 
   &__container {
+    margin: 0 auto;
     &__content {
-      margin: 0 auto;
       position: relative;
       z-index: 1111;
-      min-width: 100%;
+      width: 100%;
       max-height: 400px;
       text-align: right;
       border: 5px solid #fff;

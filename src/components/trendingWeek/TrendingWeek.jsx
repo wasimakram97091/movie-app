@@ -63,6 +63,14 @@ function TrendingWeek() {
           arrows: false,
         },
       },
+      {
+        breakpoint: 1244,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 1,
+          arrows: false,
+        },
+      },
     ],
   };
 
