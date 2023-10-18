@@ -4,12 +4,15 @@ import { fetchDetailsData } from "../../features/counter/detailsSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import Modal from "../modal/Modal";
+import { CircularProgressbar } from "react-circular-progressbar";
+import "react-circular-progressbar/dist/styles.css";
 
 function DetailsHome() {
   const { id } = useParams();
   const dispatch = useDispatch();
   const data = useSelector((state) => state.detailsData.data);
   const [modal, setModal] = useState(false);
+  const [percentage, setPercentage] = useState(0);
 
   useEffect(() => {
     dispatch(fetchDetailsData(id));
@@ -32,6 +35,16 @@ function DetailsHome() {
   const onCloseModal = () => {
     setModal(false);
   };
+  // console.log(data);
+
+  useEffect(() => {
+    setTimeout(() => {
+      if (percentage < data?.vote_average) {
+        setPercentage(percentage + 1);
+      }
+    }, 10);
+  }, [percentage]);
+
   return (
     <>
       <div className={Styles.main} style={divStyle}>
@@ -51,9 +64,9 @@ function DetailsHome() {
                 </p>
               </div>
               <div className={Styles.main__container__content__details__watch}>
-                <h2>
-                  {Math.ceil(data.vote_average)} <i className="fa-solid fa-star"></i>
-                </h2>
+                <p>
+                  <CircularProgressbar value={data.vote_average * 10} text={`${percentage}`} />
+                </p>
                 <button
                   onClick={() => {
                     modalHandler(data);
