@@ -31,7 +31,7 @@
     &__content {
       display: flex;
       justify-content: space-between;
-      align-items: top;
+      align-items: center;
       padding: 50px 0;
       z-index: 111;
 
@@ -153,26 +153,7 @@
               }
             }
           }
-          // > h2 {
-          //   font-size: 2.4rem;
-          //   margin: 0.5rem 0;
 
-          //   @media screen and (max-width: 768px) {
-          //     font-size: 2rem;
-          //     margin: 0;
-          //   }
-          //   @media screen and (max-width: 991px) {
-          //     font-size: 2.4rem;
-          //     margin: 0;
-          //   }
-          //   > i {
-          //     color: #c3073f;
-          //     font-size: 1.5rem;
-          //     @media screen and (max-width: 768px) {
-          //       font-size: 1rem;
-          //     }
-          //   }
-          // }
           display: flex;
           align-items: center;
           column-gap: 1rem;
