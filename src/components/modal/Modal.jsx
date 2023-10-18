@@ -37,7 +37,7 @@ function Modal({ closeModal }) {
                 <iframe src={`https://www.youtube.com/embed/${data.results[0].key}`} title="YouTube video player" frameBorder="0" allowFullScreen></iframe>
               ) : (
                 <div className={Styles.main__container__content__youtube__error}>
-                  <p>No Video found</p>
+                  <p>No Video found in Database</p>
                   <i className="fa-regular fa-face-frown"></i>
                 </div>
               )}
