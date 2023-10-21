@@ -4,6 +4,7 @@ import SearchBar from "../searchBar/SearchBar";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchSearchData } from "../../features/counter/searchSlice";
+import { userloggedOut } from "../../features/counter/authSlice";
 
 function Navbar() {
   const dispatch = useDispatch();
@@ -50,6 +51,7 @@ function Navbar() {
   };
 
   const handleToLogout = () => {
+    dispatch(userloggedOut());
     navigate("/");
   };
 
