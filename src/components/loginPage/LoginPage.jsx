@@ -33,6 +33,7 @@ function LoginPage() {
     } else {
       navigate("/error");
     }
+    window.localStorage.setItem("isAuthenticate", true);
     dispatch(userLogin(user));
   };
 

@@ -15,12 +15,12 @@ import { useEffect } from "react";
 function App() {
   const { isAuthenticated } = useSelector((state) => state.auth);
 
-  useEffect(() => {}, [isAuthenticated]);
+  useEffect(() => {}, []);
   return (
     <Routes>
       <Route path="/" element={<LoginPage />} />
 
-      {isAuthenticated ? (
+      {isAuthenticated || window.localStorage.getItem("isAuthenticate") ? (
         <>
           <Route path="/home" element={<LandingPage />} />
           <Route path="/details/:id" element={<DeatilsLanding />} />

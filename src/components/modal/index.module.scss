@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  position: absolute;
+
   &__overlay {
     position: fixed;
     left: 0;
@@ -37,7 +37,7 @@
       &__youtube {
         > iframe {
           width: 100%;
-          // height: 310px;
+          height: 310px;
           @media screen and (max-width: 768px) {
             width: 100%;
             height: 150px;

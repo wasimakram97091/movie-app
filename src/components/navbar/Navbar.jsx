@@ -52,6 +52,7 @@ function Navbar() {
 
   const handleToLogout = () => {
     dispatch(userloggedOut());
+    window.localStorage.removeItem("isAuthenticate");
     navigate("/");
   };
 

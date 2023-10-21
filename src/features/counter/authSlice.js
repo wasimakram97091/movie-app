@@ -20,7 +20,6 @@ const authSlice = createSlice({
     },
 
     userloggedOut: (state) => {
-      debugger;
       state.isAuthenticated = false;
     },
   },
