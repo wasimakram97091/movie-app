@@ -76,18 +76,19 @@
 
       &__details {
         color: #fff;
-        padding-left: 25px;
+        margin-left: 25px;
         z-index: 1111;
+        position: relative;
 
         @media screen and (max-width: 768px) {
-          padding-left: 0;
+          margin-left: 0;
           padding: 0 15px;
           background-color: #1a1a1d;
           margin-top: 1rem;
         }
 
         @media screen and (max-width: 991px) {
-          padding-left: 0;
+          margin-left: 0;
           padding: 0 15px;
         }
 
@@ -243,4 +244,8 @@
   @media screen and (max-width: 768px) {
     height: auto;
   }
+}
+
+body.modal-open {
+  overflow: hidden;
 }

@@ -6,6 +6,7 @@ import { useParams } from "react-router-dom";
 import Modal from "../modal/Modal";
 import { CircularProgressbar } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
+import { useLocation } from "react-router-dom";
 
 function DetailsHome() {
   const { id } = useParams();
@@ -13,6 +14,11 @@ function DetailsHome() {
   const data = useSelector((state) => state.detailsData.data);
   const [modal, setModal] = useState(false);
   const [percentage, setPercentage] = useState(0);
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   useEffect(() => {
     dispatch(fetchDetailsData(id));
@@ -30,12 +36,13 @@ function DetailsHome() {
 
   const modalHandler = (item) => {
     setModal(true);
+    document.body.style.overflow = "hidden";
   };
 
   const onCloseModal = () => {
     setModal(false);
+    document.body.style.overflow = "auto";
   };
-  // console.log(data);
 
   useEffect(() => {
     setTimeout(() => {

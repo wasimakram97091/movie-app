@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #000;
+  background-color: #161617;
   color: #ffffff;
 
   &__container {
@@ -30,6 +30,7 @@
         }
 
         > p {
+          font-family: revert;
           margin: 0;
           padding: 1rem;
           transition: 0.3s ease-in-out;
@@ -100,6 +101,43 @@
             &:hover {
               background-color: #c3073f;
               transform: scale(1.2);
+            }
+          }
+        }
+      }
+
+      &__text {
+        text-align: center;
+        background-color: #090909;
+        padding: 0 15px;
+        > p {
+          margin: 0;
+          padding: 1rem 0;
+          letter-spacing: 2px;
+
+          @media screen and (max-width: 768px) {
+            font-size: 12px;
+            letter-spacing: unset;
+          }
+
+          cursor: pointer;
+          > i {
+            color: red;
+          }
+          > a {
+            text-decoration: none;
+            > span {
+              color: #c3073f;
+              font-weight: 600;
+              transition: 0.3s ease-in-out;
+
+              @media screen and (max-width: 768px) {
+                font-size: 12px;
+              }
+
+              &:hover {
+                color: #950740;
+              }
             }
           }
         }

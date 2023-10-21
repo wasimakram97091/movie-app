@@ -15,10 +15,12 @@ import { useEffect } from "react";
 function App() {
   const { isAuthenticated } = useSelector((state) => state.auth);
 
-  useEffect(() => {}, []);
   return (
     <Routes>
       <Route path="/" element={<LoginPage />} />
+      <Route path="/signUp" element={<SignUpPage />} />
+      <Route path="/error" element={<LoginError />} />
+      <Route path="/success" element={<SignUpSuccess />} />
 
       {isAuthenticated || window.localStorage.getItem("isAuthenticate") ? (
         <>
@@ -27,9 +29,6 @@ function App() {
           <Route path="/movies" element={<MovieList />} />
           <Route path="/tvShows" element={<TvList />} />
           <Route path="search" element={<SearchData />} />
-          <Route path="/signUp" element={<SignUpPage />} />
-          <Route path="/error" element={<LoginError />} />
-          <Route path="/success" element={<SignUpSuccess />} />
         </>
       ) : null}
       <Route path="*" element={<Navigate to="/" />} />

@@ -38,6 +38,14 @@ function Footer() {
           </div>
         </div>
       </div>
+      <div className={Styles.main__container__content__text}>
+        <p>
+          Copyright ©2023 All rights reserved | <i className="fa-solid fa-heart"></i> from{" "}
+          <a href="https://wonderful-biscotti-5367ed.netlify.app/" target="_blank">
+            <span>Wasim</span>
+          </a>
+        </p>
+      </div>
     </div>
   );
 }
