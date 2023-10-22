@@ -10,7 +10,6 @@ import SignUpPage from "./components/SingUp/SignUpPage";
 import LoginError from "./components/loginErrors/LoginError";
 import SignUpSuccess from "./components/signUpSuccess/SignUpSuccess";
 import { useSelector } from "react-redux";
-import { useEffect } from "react";
 
 function App() {
   const { isAuthenticated } = useSelector((state) => state.auth);

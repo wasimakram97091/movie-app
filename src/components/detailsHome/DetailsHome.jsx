@@ -72,7 +72,7 @@ function DetailsHome() {
               </div>
               <div className={Styles.main__container__content__details__watch}>
                 <p>
-                  <CircularProgressbar value={data.vote_average * 10} text={`${Math.floor(data.vote_average)}`} />
+                  <CircularProgressbar value={Math.ceil(data.vote_average * 10)} text={`${Math.ceil(data.vote_average)}`} />
                 </p>
                 <button
                   onClick={() => {
