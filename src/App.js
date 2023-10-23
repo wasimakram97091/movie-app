@@ -16,11 +16,6 @@ function App() {
 
   return (
     <Routes>
-      <Route path="/" element={<LoginPage />} />
-      <Route path="/signUp" element={<SignUpPage />} />
-      <Route path="/error" element={<LoginError />} />
-      <Route path="/success" element={<SignUpSuccess />} />
-
       {isAuthenticated || window.localStorage.getItem("isAuthenticate") ? (
         <>
           <Route path="/home" element={<LandingPage />} />
@@ -28,9 +23,17 @@ function App() {
           <Route path="/movies" element={<MovieList />} />
           <Route path="/tvShows" element={<TvList />} />
           <Route path="search" element={<SearchData />} />
+          <Route path="*" element={<Navigate to="/home" />} />
         </>
-      ) : null}
-      <Route path="*" element={<Navigate to="/" />} />
+      ) : (
+        <>
+          <Route path="/" element={<LoginPage />} />
+          <Route path="/signUp" element={<SignUpPage />} />
+          <Route path="/error" element={<LoginError />} />
+          <Route path="/success" element={<SignUpSuccess />} />
+          <Route path="*" element={<Navigate to="/" />} />
+        </>
+      )}
     </Routes>
   );
 }

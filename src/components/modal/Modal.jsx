@@ -1,18 +1,7 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Styles from "./index.module.scss";
-import { useDispatch, useSelector } from "react-redux";
-import { useParams } from "react-router-dom";
-import { fetchVideoData } from "../../features/counter/videoSlice";
 
-function Modal({ closeModal }) {
-  const { id } = useParams();
-  const dispatch = useDispatch();
-  const data = useSelector((state) => state.videoData.data);
-
-  useEffect(() => {
-    dispatch(fetchVideoData(id));
-  }, [id]);
-
+function Modal({ closeModal, data }) {
   const closeBtn = () => {
     closeModal();
   };

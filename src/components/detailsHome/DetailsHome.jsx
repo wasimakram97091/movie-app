@@ -7,6 +7,7 @@ import Modal from "../modal/Modal";
 import { CircularProgressbar } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 import { useLocation } from "react-router-dom";
+import { fetchVideoData } from "../../features/counter/videoSlice";
 
 function DetailsHome() {
   const { id } = useParams();
@@ -38,6 +39,11 @@ function DetailsHome() {
     setModal(true);
     document.body.style.overflow = "hidden";
   };
+  const videoDetails = useSelector((state) => state.videoData.data);
+
+  useEffect(() => {
+    dispatch(fetchVideoData(id));
+  }, []);
 
   const onCloseModal = () => {
     setModal(false);
@@ -74,15 +80,17 @@ function DetailsHome() {
                 <p>
                   <CircularProgressbar value={Math.ceil(data.vote_average * 10)} text={`${Math.ceil(data.vote_average)}`} />
                 </p>
-                <button
-                  onClick={() => {
-                    modalHandler(data);
-                  }}
-                >
-                  <i className="fa-solid fa-play"></i> Watch Trailer
-                </button>
+                {!!videoDetails?.results?.length && (
+                  <button
+                    onClick={() => {
+                      modalHandler(data);
+                    }}
+                  >
+                    <i className="fa-solid fa-play"></i> Watch Trailer
+                  </button>
+                )}
               </div>
-              {modal && <Modal closeModal={onCloseModal} />}
+              {modal && <Modal closeModal={onCloseModal} data={videoDetails} />}
               <h4>Overview</h4>
               <div className={Styles.main__container__content__details__overview}>
                 <p>{data.overview}</p>
