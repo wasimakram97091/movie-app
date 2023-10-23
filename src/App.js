@@ -9,14 +9,21 @@ import LoginPage from "./components/loginPage/LoginPage";
 import SignUpPage from "./components/SingUp/SignUpPage";
 import LoginError from "./components/loginErrors/LoginError";
 import SignUpSuccess from "./components/signUpSuccess/SignUpSuccess";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { useEffect } from "react";
+import { userLogin } from "./features/counter/authSlice";
 
 function App() {
   const { isAuthenticated } = useSelector((state) => state.auth);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    if (window.localStorage.getItem("isAuthenticate")) dispatch(userLogin(""));
+  }, []);
 
   return (
     <Routes>
-      {isAuthenticated || window.localStorage.getItem("isAuthenticate") ? (
+      {isAuthenticated ? (
         <>
           <Route path="/home" element={<LandingPage />} />
           <Route path="/details/:id" element={<DeatilsLanding />} />
