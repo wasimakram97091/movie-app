@@ -68,7 +68,7 @@ function Navbar() {
             </div>
             <div className={Styles.main__container__navbar__link}>
               {<p onClick={movieHandler}>Movie</p>}
-              <p onClick={tvShowsHandler}>TV Shows</p>
+              <p onClick={tvShowsHandler}>TV</p>
               <div className={Styles.main__container__navbar__icon} onClick={toggleSearchBar}>
                 <i className="fa-solid fa-magnifying-glass"></i>
               </div>
