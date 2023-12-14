@@ -21,18 +21,18 @@ function Footer() {
             </p>
           </div>
           <div className={Styles.main__container__content__icon}>
-            <a href="https://www.facebook.com/profile.php?id=100007726477374" target="_blank">
+            <a href="https://www.facebook.com/profile.php?id=100007726477374" target="_blank" rel="noreferrer">
               <i className="fa-brands fa-facebook"></i>
             </a>
-            <a href="https://instagram.com/__hey.wasim?utm_source=qr&igshid=MzNlNGNkZWQ4Mg==" target="_blank">
+            <a href="https://instagram.com/__hey.wasim?utm_source=qr&igshid=MzNlNGNkZWQ4Mg==" target="_blank" rel="noreferrer">
               <i className="fa-brands fa-instagram"></i>
             </a>
 
-            <a href=" https://x.com/__________waim?t=y48o-vT5uF7IynY-tzs3-g&s=08" target="_blank">
+            <a href=" https://x.com/__________waim?t=y48o-vT5uF7IynY-tzs3-g&s=08" target="_blank" rel="noreferrer">
               <i className="fa-brands fa-x-twitter"></i>
             </a>
 
-            <a href="https://www.linkedin.com/in/wasim-akram-542960289" target="_blank">
+            <a href="https://www.linkedin.com/in/wasim-akram-542960289" target="_blank" rel="noreferrer">
               <i className="fa-brands fa-linkedin-in"></i>
             </a>
           </div>
@@ -41,7 +41,7 @@ function Footer() {
       <div className={Styles.main__container__content__text}>
         <p>
           Copyright ©2023 All rights reserved | <i className="fa-solid fa-heart"></i> from{" "}
-          <a href="https://my-portfolio-lac-gamma-89.vercel.app/" target="_blank">
+          <a href="https://venerable-melba-1003e1.netlify.app/" target="_blank" rel="noreferrer">
             <span>Wasim</span>
           </a>
         </p>
