@@ -63,7 +63,7 @@ function Navbar() {
           <div className={Styles.main__container__navbar}>
             <div className={Styles.main__container__navbar__logo}>
               <h2 onClick={homeHandler}>
-                <img src="https://www.sundirect.in/Content/Uploads/Blocks/636928233543372120_cineplex-hd.png" alt="Logo" />
+                <img src="https://upload.wikimedia.org/wikipedia/commons/2/27/Cineplexx.png" alt="Logo" />
               </h2>
             </div>
             <div className={Styles.main__container__navbar__link}>

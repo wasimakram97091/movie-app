@@ -41,7 +41,7 @@ function Footer() {
       <div className={Styles.main__container__content__text}>
         <p>
           Copyright ©2023 All rights reserved | <i className="fa-solid fa-heart"></i> from{" "}
-          <a href="https://wonderful-biscotti-5367ed.netlify.app/" target="_blank">
+          <a href="https://my-portfolio-lac-gamma-89.vercel.app/" target="_blank">
             <span>Wasim</span>
           </a>
         </p>

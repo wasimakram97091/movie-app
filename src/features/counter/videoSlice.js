@@ -12,7 +12,7 @@ export const fetchVideoData = createAsyncThunk("fetchVideoData", async (id) => {
 
   try {
     const response = await axios.get(`https://api.themoviedb.org/3/movie/${id}/videos?api_key=${API_KEY}`);
-    console.log(response.data);
+
     return response.data;
   } catch (error) {
     throw error;
