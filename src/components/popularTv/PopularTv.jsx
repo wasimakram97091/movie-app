@@ -89,9 +89,9 @@ function PopularTv() {
                   {popularTvResults.map((item) => (
                     <MovieCard
                       key={item.id}
-                      topRated_tv_original_name={item.title}
+                      topRated_tv_original_name={!item.original_name ? item.title : item.original_name}
                       topRated_tv_backgroundImageUrl={item.poster_path}
-                      topRated_tv_first_air_date={item.release_date}
+                      topRated_tv_first_air_date={!item.first_air_date ? item.release_date : item.first_air_date}
                       topRated_tv_rating={item.vote_average}
                       chipId={item.genre_ids}
                       genreIdVSName={genreIdVSName}

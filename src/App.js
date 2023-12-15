@@ -22,26 +22,28 @@ function App() {
   }, []);
 
   return (
-    <Routes>
-      {isAuthenticated ? (
-        <>
-          <Route path="/home" element={<LandingPage />} />
-          <Route path="/details/:id" element={<DeatilsLanding />} />
-          <Route path="/movies" element={<MovieList />} />
-          <Route path="/tvShows" element={<TvList />} />
-          <Route path="search" element={<SearchData />} />
-          <Route path="*" element={<Navigate to="/home" />} />
-        </>
-      ) : (
-        <>
-          <Route path="/" element={<LoginPage />} />
-          <Route path="/signUp" element={<SignUpPage />} />
-          <Route path="/error" element={<LoginError />} />
-          <Route path="/success" element={<SignUpSuccess />} />
-          <Route path="*" element={<Navigate to="/" />} />
-        </>
-      )}
-    </Routes>
+    <>
+      <Routes>
+        {isAuthenticated ? (
+          <>
+            <Route path="/home" element={<LandingPage />} />
+            <Route path="/details/:id" element={<DeatilsLanding />} />
+            <Route path="/movies" element={<MovieList />} />
+            <Route path="/tvShows" element={<TvList />} />
+            <Route path="search" element={<SearchData />} />
+            <Route path="*" element={<Navigate to="/home" />} />
+          </>
+        ) : (
+          <>
+            <Route path="/" element={<LoginPage />} />
+            <Route path="/signUp" element={<SignUpPage />} />
+            <Route path="/error" element={<LoginError />} />
+            <Route path="/success" element={<SignUpSuccess />} />
+            <Route path="*" element={<Navigate to="/" />} />
+          </>
+        )}
+      </Routes>
+    </>
   );
 }
 
