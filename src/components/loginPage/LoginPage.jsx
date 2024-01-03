@@ -26,6 +26,7 @@ function LoginPage() {
       setError("Please enter both Email & Password");
       return;
     }
+    console.log(user);
 
     let existUser = user.find((item) => item.email === formData.email && item.password === formData.password);
     if (existUser) {

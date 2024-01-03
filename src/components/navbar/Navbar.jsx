@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchSearchData } from "../../features/counter/searchSlice";
 import { userloggedOut } from "../../features/counter/authSlice";
+import logo from "../../images/cine1.png";
 
 function Navbar() {
   const dispatch = useDispatch();
@@ -63,7 +64,7 @@ function Navbar() {
           <div className={Styles.main__container__navbar}>
             <div className={Styles.main__container__navbar__logo}>
               <h2 onClick={homeHandler}>
-                <img src="https://upload.wikimedia.org/wikipedia/commons/2/27/Cineplexx.png" alt="Logo" />
+                <img src={logo} alt="Logo" />
               </h2>
             </div>
             <div className={Styles.main__container__navbar__link}>

@@ -4,7 +4,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchMovieListData } from "../../features/counter/movieListSlice";
 import MovieCard from "../movieCard/MovieCard";
 import Loading from "../loader/Loading";
-
 import { useNavigate } from "react-router-dom";
 
 function MovieList() {

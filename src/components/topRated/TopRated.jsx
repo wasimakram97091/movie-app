@@ -76,7 +76,7 @@ function TopRated() {
       },
     ],
   };
-  console.log(data);
+
   return (
     <div className={Styles.main}>
       <div className={Styles.main__container}>
