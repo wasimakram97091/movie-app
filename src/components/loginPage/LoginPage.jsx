@@ -26,16 +26,15 @@ function LoginPage() {
       setError("Please enter both Email & Password");
       return;
     }
-    console.log(user);
 
     let existUser = user.find((item) => item.email === formData.email && item.password === formData.password);
     if (existUser) {
+      window.localStorage.setItem("isAuthenticate", true);
+      dispatch(userLogin(user));
       navigate("/home");
     } else {
       navigate("/error");
     }
-    window.localStorage.setItem("isAuthenticate", true);
-    dispatch(userLogin(user));
   };
 
   const toggleShowPassword = () => {
